@@ -6,9 +6,10 @@ namespace Game.InputLogic
 {
     internal sealed class GyroscopeInputView : BaseInputView
     {
-        public override void Init(SubscriptionProperty<float> leftMove, SubscriptionProperty<float> rightMove, float speed)
+        public override void Init(SubscriptionProperty<float> leftMove, SubscriptionProperty<float> rightMove, 
+            float speed, SubscriptionProperty<Vector2> endPosition, SubscriptionProperty<Vector2> startPosition)
         {
-            base.Init(leftMove, rightMove, speed);
+            base.Init(leftMove, rightMove, speed, endPosition, startPosition);
             Input.gyro.enabled = true;
             UpdateManager.SubscribeToUpdate(Move);
         }

@@ -7,9 +7,9 @@ namespace Game.InputLogic
     internal sealed class InputTapView : BaseInputView
     {
         public override void Init(SubscriptionProperty<float> leftMove, SubscriptionProperty<float> rightMove,
-            float speed)
+            float speed, SubscriptionProperty<Vector2> endPosition, SubscriptionProperty<Vector2> startPosition)
         {
-            base.Init(leftMove, rightMove, speed);
+            base.Init(leftMove, rightMove, speed, endPosition, startPosition);
             _buttonMove.onClick.AddListener(OnClick);
         }
 
