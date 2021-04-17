@@ -15,6 +15,14 @@ namespace Ui
             _profilePlayer = profilePlayer;
             _view = LoadView(placeForUi);
             _view.Init(StartGame);
+            
+            SubscriptionProperty<Vector2> startPosition = new SubscriptionProperty<Vector2>();
+            SubscriptionProperty<Vector2> endPosition = new SubscriptionProperty<Vector2>();
+            
+            SwipeController swipeController = new SwipeController(startPosition, endPosition);
+            AddController(swipeController);
+            TrailController trailController = new TrailController(startPosition, endPosition);
+            AddController(trailController);
         }
 
         private MainMenuView LoadView(Transform placeForUi)

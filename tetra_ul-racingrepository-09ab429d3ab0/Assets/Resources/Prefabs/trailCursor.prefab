@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 377846834840298072}
   - component: {fileID: 2742073144435075505}
+  - component: {fileID: -1901888443637905119}
   m_Layer: 5
   m_Name: trailCursor
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -72,7 +73,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Time: 1
+  m_Time: 0.38
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -135,6 +136,19 @@ TrailRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_MinVertexDistance: 0.1
+  m_MinVertexDistance: 0.06
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &-1901888443637905119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2742073144435075506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c395df510d4b65949a795da5f12840d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {fileID: 377846834840298072}
